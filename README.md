@@ -1,5 +1,8 @@
 # git-log-to-json
 
+[![Build Status](https://travis-ci.org/simonrenoult/git-log-to-json.svg?branch=master)](https://travis-ci.org/simonrenoult/git-log-to-json)
+[![Coverage Status](https://coveralls.io/repos/github/simonrenoult/git-log-to-json/badge.svg?branch=master)](https://coveralls.io/github/simonrenoult/git-log-to-json?branch=master)
+
 > Print git log in json
 
 ## Install
