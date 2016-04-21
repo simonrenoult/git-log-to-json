@@ -1,6 +1,6 @@
 {
   "name": "git-log-to-json",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Print git log in json",
   "bin": {
     "cambire": "bin/git-log-to-json"
