@@ -1,0 +1,10 @@
+node_modules/
+.idea/
+cucumber/
+coverage/
+*.iml
+test-report*
+*.tgz
+*.log
+*.rdb
+.project
