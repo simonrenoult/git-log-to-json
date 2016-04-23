@@ -1,7 +1,9 @@
 # git-log-to-json
 
-[![Build Status](https://travis-ci.org/simonrenoult/git-log-to-json.svg?branch=master)](https://travis-ci.org/simonrenoult/git-log-to-json)
-[![Coverage Status](https://coveralls.io/repos/github/simonrenoult/git-log-to-json/badge.svg?branch=master)](https://coveralls.io/github/simonrenoult/git-log-to-json?branch=master)
+[![Style Status][style-image]][style-url]
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status][coverage-image]][coverage-url]
+[![NPM Version][npm-image]][npm-url]
 
 > Print git log in json
 
@@ -59,3 +61,12 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[travis-image]: https://travis-ci.org/simonrenoult/git-log-to-json.svg?branch=master
+[travis-url]: https://travis-ci.org/simonrenoult/git-log-to-json
+[style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[style-url]: http://standardjs.com/
+[coverage-image]: https://coveralls.io/repos/github/simonrenoult/git-log-to-json/badge.svg?branch=master
+[coverage-url]: https://coveralls.io/github/simonrenoult/git-log-to-json?branch=master
+[npm-image]: https://img.shields.io/npm/v/git-log-to-json.svg?style=flat-squared
+[npm-url]: https://www.npmjs.com/package/git-log-to-json
