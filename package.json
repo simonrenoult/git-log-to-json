@@ -1,18 +1,12 @@
 {
   "name": "git-log-to-json",
   "version": "0.1.0",
+  "author": "Simon RENOULT <simon.renoult@gmail.com>",
   "description": "Print git log in json",
+  "license": "MIT",
+  "main": "./lib/git-log-to-json",
   "bin": {
-    "cambire": "bin/git-log-to-json"
-  },
-  "main": "index.js",
-  "scripts": {
-    "start": "./bin/git-log-to-json",
-    "test": "npm run lint && npm run test:unit",
-    "test:unit": "mocha --recursive",
-    "test:coverage": "istanbul cover --print detail --include-all-sources _mocha test/*.unit.js",
-    "lint": "standard && echo \"Looks good!\"",
-    "coveralls": "cat coverage/lcov.info | coveralls"
+    "git-log-to-json": "./bin/git-log-to-json"
   },
   "keywords": [
     "git",
@@ -20,8 +14,13 @@
     "history",
     "json"
   ],
-  "author": "Simon RENOULT <simon.renoult@gmail.com>",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonrenoult/git-log-to-json"
+  },
+  "bugs": {
+    "url": "https://github.com/simonrenoult/git-log-to-json/issues"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
@@ -35,5 +34,13 @@
   "dependencies": {
     "commander": "^2.9.0",
     "shelljs": "^0.6.0"
+  },
+  "scripts": {
+    "start": "./bin/git-log-to-json",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "mocha --recursive",
+    "test:coverage": "istanbul cover --print detail --include-all-sources _mocha test/*.unit.js",
+    "lint": "standard && echo \"Looks good!\"",
+    "coveralls": "cat coverage/lcov.info | coveralls"
   }
 }

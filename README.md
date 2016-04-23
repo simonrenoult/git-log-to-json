@@ -8,7 +8,7 @@
 ## Install
 
 ```
-$ npm install -g git-log-to-json
+$ npm install git-log-to-json
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ $ npm install -g git-log-to-json
 ## Example
 
 ```
-$ git-log-to-json <path-to-git-dir>
+$ ./bin/git-log-to-json <path-to-git-dir> > history.json
 ```
 
 ## License
