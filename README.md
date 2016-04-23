@@ -13,6 +13,19 @@ $ npm install git-log-to-json
 
 ## Usage
 
+If installed globally:
+```
+  Usage: git log-to-json <dir>
+
+  Print git log in json
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+```
+
+If installed locally:
 ```
   Usage: git-log-to-json <dir>
 
@@ -24,11 +37,16 @@ $ npm install git-log-to-json
     -V, --version  output the version number
 ```
 
+
 ## Example
 
 ```
-$ ./bin/git-log-to-json <path-to-git-dir> > history.json
+$ git log-to-json . > history.json
 ```
+
+## Note
+
+If installed globally, the command `git-log-to-json` will not be available. Use `git log-to-json` instead. This is due to `git` doing some fancy work.
 
 ## License
 
