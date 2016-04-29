@@ -58,13 +58,13 @@ const commits = exports.commits = [
 exports.history = {
   obj: [
     commits[0].obj,
-    commits[0].obj,
-    commits[0].obj,
-    commits[0].obj
+    commits[1].obj,
+    commits[2].obj,
+    commits[3].obj
   ],
   raw:
 `${commits[0].raw}
-${commits[0].raw}
-${commits[0].raw}
-${commits[0].raw}`
+${commits[1].raw}
+${commits[2].raw}
+${commits[3].raw}`
 }
