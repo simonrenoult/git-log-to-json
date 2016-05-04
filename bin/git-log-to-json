@@ -25,7 +25,8 @@ const options = {
   authorEmail: cli.authorEmail,
   date: cli.date,
   subject: cli.subject,
-  body: cli.body
+  body: cli.body,
+  pretty: cli.pretty
 }
 
 gitLogToJson(cli.args[0], options)

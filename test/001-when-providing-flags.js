@@ -16,6 +16,15 @@ describe('get-log-to-json', () => {
       done()
     })
   })
+  describe('--pretty', () => {
+    before(() => {
+      this.option = {args: [1, 2, 3, 4], pretty: true}
+      this.expected = repo
+    })
+    it('should return the appropriate value', () => {
+      this.actual.should.deep.equal(this.expected)
+    })
+  })
   describe('--hash', () => {
     before(() => {
       this.option = {args: [1, 2, 3, 4], hash: true}
