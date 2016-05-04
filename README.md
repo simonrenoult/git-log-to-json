@@ -5,7 +5,7 @@
 [![Coverage Status][coverage-image]][coverage-url]
 [![NPM Version][npm-image]][npm-url]
 
-> Print git log in json
+> Print a configurable git log in json
 
 ## Install
 
@@ -18,23 +18,37 @@ $ npm install git-log-to-json
 ```
 Usage: git-log-to-json|git log-to-json <dir>
 
-Print git log in json
+Print a configurable git log in json
 
 Options:
 
-  -h, --help     output usage information
-  -V, --version  output the version number
+  -h, --help          output usage information
+  -V, --version       output the version number
+  -H, --hash          output the commit hash
+  -D, --date          output the commit date
+  -N, --author-name   output the commit author name
+  -E, --author-email  output the commit author email
+  -S, --subject       output the commit subject
+  -B, --body          output the commit body
+  -P, --pretty        format the output with "\t"
 
 Examples:
 
   $ git log-to-json .
+  $ git log-to-json . --hash --date --author-name
+  $ git log-to-json . -H -D --subject
+  $ git log-to-json . -H -D -S -B --pretty
   $ ./bin/git-log-to-json .
 ```
 
-## Example
+## Examples
 
 ```
 $ git log-to-json . > history.json
+```
+
+```
+$ git log-to-json . --hash --date --author-name --pretty > history.json
 ```
 
 ## Note

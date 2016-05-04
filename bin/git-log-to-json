@@ -6,4 +6,32 @@
  * Module dependencies.
  */
 
-require('../lib/git-log-to-json')()
+const cli = require('../lib/cli')
+const gitLogToJson = require('../lib/git-log-to-json')
+
+/**
+ * Module logic
+ */
+
+if (!cli.args || !cli.args.length) {
+  cli.help()
+  process.exit(0)
+}
+
+const options = {
+  args: cli.rawArgs,
+  hash: cli.hash,
+  authorName: cli.authorName,
+  authorEmail: cli.authorEmail,
+  date: cli.date,
+  subject: cli.subject,
+  body: cli.body
+}
+
+gitLogToJson(cli.args[0], options)
+  .then((json) => {
+    process.stdout.write(JSON.stringify(json, null, cli.pretty ? '\t' : null))
+  })
+  .catch((err) => {
+    console.error(err)
+  })

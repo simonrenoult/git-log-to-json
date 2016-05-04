@@ -2,7 +2,7 @@
   "name": "git-log-to-json",
   "version": "0.1.3",
   "author": "Simon RENOULT <simon.renoult@gmail.com>",
-  "description": "Print git log in json",
+  "description": "Print a configurable git log in json",
   "license": "MIT",
   "main": "./lib/git-log-to-json",
   "bin": {
@@ -39,9 +39,9 @@
   "scripts": {
     "start": "./bin/git-log-to-json",
     "test": "npm run lint && npm run test:all",
-    "test:unit": "mocha --recursive test/*.unit.js",
+    "test:unit": "mocha --recursive test/*.js",
     "test:all": "npm run test:unit",
-    "test:coverage": "istanbul cover --print detail --include-all-sources _mocha test/*.js",
+    "test:coverage": "istanbul cover --print detail _mocha test/*.js",
     "lint": "standard && echo \"Looks good!\"",
     "coveralls": "npm run test:coverage && cat coverage/lcov.info | coveralls"
   }
