@@ -51,9 +51,16 @@ $ git log-to-json . > history.json
 $ git log-to-json . --hash --date --author-name --pretty > history.json
 ```
 
-## Note
+## Troubleshooting
 
-If installed globally, the command `git-log-to-json` will not be available. Use `git log-to-json` instead. This is due to `git` doing some fancy work.
+> The tests fail to run locally.
+
+The `test/mock/repo` submodule might be missing. Clone `git-log-to-json` with the `--recursive` flag.
+
+> I installed `git-log-to-json` globally but the command is not found.
+
+The command is still available, not to autocompletion though. This is due to
+`git` doing some fancy work. The autocompletion will work with `git log-to-json`.
 
 [travis-image]: https://travis-ci.org/simonrenoult/git-log-to-json.svg?branch=master
 [travis-url]: https://travis-ci.org/simonrenoult/git-log-to-json
