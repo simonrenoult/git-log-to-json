@@ -1,4 +1,13 @@
 [{
+    "hash": "939731884324ddbbfafe712d903fc9a315e68bde",
+    "date": "2016-05-05T16:38:35+02:00",
+    "subject": "fix(body): replace \n with a blank",
+    "body": "",
+    "author": {
+        "name": "Simon Renoult",
+        "email": "simon.renoult@gmail.com"
+    }
+}, {
     "hash": "9a68dd92d60a0a01b32019779b9236658ec32d1b",
     "date": "2016-05-02T15:22:33+02:00",
     "subject": "chore(npm): add package.json",
