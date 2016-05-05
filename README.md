@@ -62,21 +62,42 @@ feat(#420): node.js rocks
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 ```
 
 ```js
 require('git-log-to-json')('.')
   .then((log) => {
-    // do something
+    /* log will contain:
+    [{
+      "hash": "<hash>",
+      "date": "2016-04-21T19:00:13+02:00",
+      "subject": "feat(#420): node.js rocks",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "author": {
+        "name": "Simon Renoult",
+        "email": "simon.renoult@gmail.com"
+      }
+    }]
+     */
   })
   .catch((err) => {
     // do something
   })
 
-require('git-log-to-json')('.', {commit: true, date: true, authorEmail: true})
+require('git-log-to-json')('.', {hash: true, date: true, authorEmail: true})
   .then((log) => {
-    // do something
+    /* log will contain:
+    [{
+      "hash": "<hash>",
+      "date": "2016-04-21T19:00:13+02:00",
+      "author": {
+        "email": "simon.renoult@gmail.com"
+      }
+    }]
+     */
   })
   .catch((err) => {
     // do something
