@@ -13,7 +13,7 @@
 $ npm install git-log-to-json
 ```
 
-## Usage
+## CLI
 
 ```
 Usage: git-log-to-json|git log-to-json <dir>
@@ -38,17 +38,49 @@ Examples:
   $ git log-to-json . --hash --date --author-name
   $ git log-to-json . -H -D --subject
   $ git log-to-json . -H -D -S -B --pretty
-  $ ./bin/git-log-to-json .
+  $ ./bin/git-log-to-json . > history.json
 ```
+
+## API
+
+`require('git-log-to-json')(directory[, options])`
+ * `directory` _&lt;String&gt;_ The directory to analyze. Must contain a `.git` directory
+ * `options` _&lt;Object&gt;_ An optional map of flags to configure the `git log` command:
+   * `hash` _&lt;Boolean&gt;_ Includes the commit hash
+   * `date` _&lt;Boolean&gt;_ Includes the commit date
+   * `subject` _&lt;Boolean&gt;_ Includes the commit subject
+   * `body` _&lt;Boolean&gt;_ Includes the commit body
+   * `authorEmail` _&lt;Boolean&gt;_ Includes the commit author email
+   * `authorName` _&lt;Boolean&gt;_ Includes the commit author name
+ * Return: _&lt;Promise&gt;_ The promise resolved once the `git log` command is executed.
 
 ## Examples
 
+Given the commit:
 ```
-$ git log-to-json . > history.json
+feat(#420): node.js rocks
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 ```
 
-```
-$ git log-to-json . --hash --date --author-name --pretty > history.json
+```js
+require('git-log-to-json')('.')
+  .then((log) => {
+    // do something
+  })
+  .catch((err) => {
+    // do something
+  })
+
+require('git-log-to-json')('.', {commit: true, date: true, authorEmail: true})
+  .then((log) => {
+    // do something
+  })
+  .catch((err) => {
+    // do something
+  })
 ```
 
 ## Troubleshooting
