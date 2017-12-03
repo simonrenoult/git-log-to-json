@@ -1,7 +1,5 @@
 /* globals describe it before beforeEach */
 
-'use strict'
-
 const chai = require('chai')
 const path = require('path')
 const repo = require('./mock/repo')

@@ -1,7 +1,5 @@
 /* globals describe it */
 
-'use strict'
-
 const chai = require('chai')
 const path = require('path')
 const gitLogToJson = require('../lib/git-log-to-json')
