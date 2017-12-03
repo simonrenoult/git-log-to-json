@@ -33,6 +33,25 @@ describe('get-log-to-json', () => {
     })
   })
 
+  describe('--limit', () => {
+    before(() => {
+      this.option = {
+        args: [
+          'fakeCommandLineArg1',
+          'fakeCommandLineArg2',
+          'fakeCommandLineArg3',
+          'fakeCommandLineArg4'
+        ],
+        pretty: true,
+        limit: 3
+      }
+      this.expected = repo
+    })
+    it('should return the appropriate limit of commits', () => {
+      this.actual.length.should.equal(3)
+    })
+  })
+
   describe('--hash', () => {
     before(() => {
       this.option = {

@@ -26,6 +26,7 @@ const options = {
   date: cli.date,
   subject: cli.subject,
   body: cli.body,
+  limit: cli.limit,
   pretty: cli.pretty
 }
 
