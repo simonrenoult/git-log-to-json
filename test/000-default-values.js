@@ -16,4 +16,12 @@ describe('get-log-to-json', () => {
       })
     })
   })
+
+  describe('when <dir> does not exist', () => {
+    it('stops and shows a message', () => {
+      gitLogToJson(path.join(__dirname, './mock/unknown')).catch((err) => {
+        err.should.exists
+      })
+    })
+  })
 })
