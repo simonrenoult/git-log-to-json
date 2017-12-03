@@ -30,13 +30,13 @@ Options:
   -E, --author-email  output the commit author email
   -S, --subject       output the commit subject
   -B, --body          output the commit body
-  -N, --number        limit the number of commit logged
+  -L, --limit         limit the number of commit logged
   -P, --pretty        format the output with "\t"
 
 Examples:
 
   $ git log-to-json .
-  $ git log-to-json . --number 3
+  $ git log-to-json . --limit 3
   $ git log-to-json . --hash --date --author-name
   $ git log-to-json . -H -D --subject
   $ git log-to-json . -H -D -S -B --pretty
@@ -54,7 +54,7 @@ Examples:
    * `body` _&lt;Boolean&gt;_ Includes the commit body
    * `authorEmail` _&lt;Boolean&gt;_ Includes the commit author email
    * `authorName` _&lt;Boolean&gt;_ Includes the commit author name
-   * `number` _&lt;Integer&gt;_ Limit the number of commit logged
+   * `limit` _&lt;Integer&gt;_ Limit the number of commit logged
    * `pretty` _&lt;Boolean&gt;_ Format the output with \t
  * Return: _&lt;Promise&gt;_ The promise resolved once the `git log` command is executed.
 
