@@ -14,18 +14,36 @@ describe('get-log-to-json', () => {
       done()
     })
   })
+
   describe('--pretty', () => {
     before(() => {
-      this.option = {args: [1, 2, 3, 4], pretty: true}
+      this.option = {
+        args: [
+          'fakeCommandLineArg1',
+          'fakeCommandLineArg2',
+          'fakeCommandLineArg3',
+          'fakeCommandLineArg4'
+        ],
+        pretty: true
+      }
       this.expected = repo
     })
     it('should return the appropriate value', () => {
       this.actual.should.deep.equal(this.expected)
     })
   })
+
   describe('--hash', () => {
     before(() => {
-      this.option = {args: [1, 2, 3, 4], hash: true}
+      this.option = {
+        args: [
+          'fakeCommandLineArg1',
+          'fakeCommandLineArg2',
+          'fakeCommandLineArg3',
+          'fakeCommandLineArg4'
+        ],
+        hash: true
+      }
       this.expected = repo.map((commit) => {
         return {
           hash: commit.hash
@@ -36,9 +54,18 @@ describe('get-log-to-json', () => {
       this.actual.should.deep.equal(this.expected)
     })
   })
+
   describe('--commit --date', () => {
     before(() => {
-      this.option = {args: [1, 2, 3, 4], hash: true, date: true}
+      this.option = {
+        args: [
+          'fakeCommandLineArg1',
+          'fakeCommandLineArg2',
+          'fakeCommandLineArg3',
+          'fakeCommandLineArg4'
+        ],
+        hash: true, date: true
+      }
       this.expected = repo.map((commit) => {
         return {
           hash: commit.hash,
@@ -50,9 +77,18 @@ describe('get-log-to-json', () => {
       this.actual.should.deep.equal(this.expected)
     })
   })
+
   describe('--commit --date --author-name', () => {
     before(() => {
-      this.option = {args: [1, 2, 3, 4], hash: true, date: true, authorName: true}
+      this.option = {
+        args: [
+          'fakeCommandLineArg1',
+          'fakeCommandLineArg2',
+          'fakeCommandLineArg3',
+          'fakeCommandLineArg4'
+        ],
+        hash: true, date: true, authorName: true
+      }
       this.expected = repo.map((commit) => {
         return {
           hash: commit.hash,
@@ -67,9 +103,18 @@ describe('get-log-to-json', () => {
       this.actual.should.deep.equal(this.expected)
     })
   })
+
   describe('--commit --date --author-name --author-date', () => {
     before(() => {
-      this.option = {args: [1, 2, 3, 4], hash: true, date: true, authorName: true, authorEmail: true}
+      this.option = {
+        args: [
+          'fakeCommandLineArg1',
+          'fakeCommandLineArg2',
+          'fakeCommandLineArg3',
+          'fakeCommandLineArg4'
+        ],
+        hash: true, date: true, authorName: true, authorEmail: true
+      }
       this.expected = repo.map((commit) => {
         return {
           hash: commit.hash,
@@ -85,9 +130,18 @@ describe('get-log-to-json', () => {
       this.actual.should.deep.equal(this.expected)
     })
   })
+
   describe('--commit --date --author-name --author-date --subject', () => {
     before(() => {
-      this.option = {args: [1, 2, 3, 4], hash: true, date: true, authorName: true, authorEmail: true, subject: true}
+      this.option = {
+        args: [
+          'fakeCommandLineArg1',
+          'fakeCommandLineArg2',
+          'fakeCommandLineArg3',
+          'fakeCommandLineArg4'
+        ],
+        hash: true, date: true, authorName: true, authorEmail: true, subject: true
+      }
       this.expected = repo.map((commit) => {
         return {
           hash: commit.hash,
@@ -104,9 +158,18 @@ describe('get-log-to-json', () => {
       this.actual.should.deep.equal(this.expected)
     })
   })
+
   describe('--commit --date --author-name --author-date --subject --body', () => {
     before(() => {
-      this.option = {args: [1, 2, 3, 4], hash: true, date: true, authorName: true, authorEmail: true, subject: true, body: true}
+      this.option = {
+        args: [
+          'fakeCommandLineArg1',
+          'fakeCommandLineArg2',
+          'fakeCommandLineArg3',
+          'fakeCommandLineArg4'
+        ],
+        hash: true, date: true, authorName: true, authorEmail: true, subject: true, body: true
+      }
       this.expected = repo.map((commit) => {
         return {
           hash: commit.hash,
