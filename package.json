@@ -1,6 +1,6 @@
 {
   "name": "git-log-to-json",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Simon RENOULT <simon.renoult@gmail.com>",
   "description": "Print a configurable git log in json",
   "license": "MIT",
