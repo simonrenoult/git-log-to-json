@@ -83,7 +83,8 @@ describe('get-log-to-json', () => {
           'fakeCommandLineArg3',
           'fakeCommandLineArg4'
         ],
-        hash: true, date: true
+        hash: true,
+        date: true
       }
       this.expected = repo.map((commit) => {
         return {
@@ -106,7 +107,9 @@ describe('get-log-to-json', () => {
           'fakeCommandLineArg3',
           'fakeCommandLineArg4'
         ],
-        hash: true, date: true, authorName: true
+        hash: true,
+        date: true,
+        authorName: true
       }
       this.expected = repo.map((commit) => {
         return {
@@ -132,7 +135,10 @@ describe('get-log-to-json', () => {
           'fakeCommandLineArg3',
           'fakeCommandLineArg4'
         ],
-        hash: true, date: true, authorName: true, authorEmail: true
+        hash: true,
+        date: true,
+        authorName: true,
+        authorEmail: true
       }
       this.expected = repo.map((commit) => {
         return {
@@ -159,7 +165,11 @@ describe('get-log-to-json', () => {
           'fakeCommandLineArg3',
           'fakeCommandLineArg4'
         ],
-        hash: true, date: true, authorName: true, authorEmail: true, subject: true
+        hash: true,
+        date: true,
+        authorName: true,
+        authorEmail: true,
+        subject: true
       }
       this.expected = repo.map((commit) => {
         return {
@@ -187,7 +197,12 @@ describe('get-log-to-json', () => {
           'fakeCommandLineArg3',
           'fakeCommandLineArg4'
         ],
-        hash: true, date: true, authorName: true, authorEmail: true, subject: true, body: true
+        hash: true,
+        date: true,
+        authorName: true,
+        authorEmail: true,
+        subject: true,
+        body: true
       }
       this.expected = repo.map((commit) => {
         return {
