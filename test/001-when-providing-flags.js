@@ -1,18 +1,14 @@
-/* globals describe it before beforeEach */
-
-const chai = require('chai')
+const { expect } = require('chai')
+const { describe, it, before, beforeEach } = require('mocha')
 const path = require('path')
 const repo = require('./mock/repo')
 const gitLogToJson = require('../lib/git-log-to-json')
 
-chai.should()
+const pathToRepo = path.join(__dirname, './mock/repo')
 
-describe('get-log-to-json', () => {
-  beforeEach((done) => {
-    gitLogToJson(path.join(__dirname, './mock/repo'), this.option).then((res) => {
-      this.actual = res
-      done()
-    })
+describe('git-log-to-json', () => {
+  beforeEach(async () => {
+    this.actual = await gitLogToJson(pathToRepo, this.option)
   })
 
   describe('--pretty', () => {
@@ -29,7 +25,7 @@ describe('get-log-to-json', () => {
       this.expected = repo
     })
     it('should return the appropriate value', () => {
-      this.actual.should.deep.equal(this.expected)
+      expect(this.actual).to.deep.equal(this.expected)
     })
   })
 
@@ -48,7 +44,7 @@ describe('get-log-to-json', () => {
       this.expected = repo
     })
     it('should return the appropriate limit of commits', () => {
-      this.actual.length.should.equal(3)
+      expect(this.actual.length).to.equal(3)
     })
   })
 
@@ -70,7 +66,7 @@ describe('get-log-to-json', () => {
       })
     })
     it('should return the appropriate value', () => {
-      this.actual.should.deep.equal(this.expected)
+      expect(this.actual).to.deep.equal(this.expected)
     })
   })
 
@@ -94,7 +90,7 @@ describe('get-log-to-json', () => {
       })
     })
     it('should return the appropriate value', () => {
-      this.actual.should.deep.equal(this.expected)
+      expect(this.actual).to.deep.equal(this.expected)
     })
   })
 
@@ -122,7 +118,7 @@ describe('get-log-to-json', () => {
       })
     })
     it('should return the appropriate value', () => {
-      this.actual.should.deep.equal(this.expected)
+      expect(this.actual).to.deep.equal(this.expected)
     })
   })
 
@@ -152,7 +148,7 @@ describe('get-log-to-json', () => {
       })
     })
     it('should return the appropriate value', () => {
-      this.actual.should.deep.equal(this.expected)
+      expect(this.actual).to.deep.equal(this.expected)
     })
   })
 
@@ -184,7 +180,7 @@ describe('get-log-to-json', () => {
       })
     })
     it('should return the appropriate value', () => {
-      this.actual.should.deep.equal(this.expected)
+      expect(this.actual).to.deep.equal(this.expected)
     })
   })
 
@@ -218,7 +214,7 @@ describe('get-log-to-json', () => {
       })
     })
     it('should return the appropriate value', () => {
-      this.actual.should.deep.equal(this.expected)
+      expect(this.actual).to.deep.equal(this.expected)
     })
   })
 })

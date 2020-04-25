@@ -35,7 +35,8 @@
     "standard": "^14.3.3"
   },
   "dependencies": {
-    "commander": "^5.0.0"
+    "commander": "^5.0.0",
+    "shortid": "^2.2.15"
   },
   "scripts": {
     "start": "./bin/git-log-to-json",

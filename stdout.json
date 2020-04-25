@@ -1,0 +1,72 @@
+[
+  {
+    "hash": "939731884324ddbbfafe712d903fc9a315e68bde",
+    "author": {
+      "name": "Simon Renoult",
+      "email": "simon.renoult@gmail.com"
+    },
+    "date": "2016-05-05T16:38:35+02:00",
+    "subject": "fix(body): replace \\n with a blank",
+    "body": ""
+  },
+  {
+    "hash": "9a68dd92d60a0a01b32019779b9236658ec32d1b",
+    "author": {
+      "name": "Simon Renoult",
+      "email": "simon.renoult@gmail.com"
+    },
+    "date": "2016-05-02T15:22:33+02:00",
+    "subject": "chore(npm): add package.json",
+    "body": ""
+  },
+  {
+    "hash": "c953f53265566173f6678e0776260e0a5badd86b",
+    "author": {
+      "name": "Simon Renoult",
+      "email": "simon.renoult@gmail.com"
+    },
+    "date": "2016-04-29T12:44:53+02:00",
+    "subject": "doc(data): data 1",
+    "body": ""
+  },
+  {
+    "hash": "9c857f6bb55fdfe5d6c00fc8d53709bdb04368ac",
+    "author": {
+      "name": "Simon Renoult",
+      "email": "simon.renoult@gmail.com"
+    },
+    "date": "2016-04-29T12:44:31+02:00",
+    "subject": "doc: data 1",
+    "body": ""
+  },
+  {
+    "hash": "dd3fc78bd7b36664929188102823cd1fc12afeac",
+    "author": {
+      "name": "Simon Renoult",
+      "email": "simon.renoult@gmail.com"
+    },
+    "date": "2016-04-29T12:43:44+02:00",
+    "subject": "random 1",
+    "body": ""
+  },
+  {
+    "hash": "2455f56fa9a6801016befbe347e0be25ea1664cb",
+    "author": {
+      "name": "Simon Renoult",
+      "email": "simon.renoult@gmail.com"
+    },
+    "date": "2016-04-29T12:43:01+02:00",
+    "subject": "feat: fake 2",
+    "body": ""
+  },
+  {
+    "hash": "ceeba1472eb60828fc0cd80e6a98e7fe76750687",
+    "author": {
+      "name": "Simon Renoult",
+      "email": "simon.renoult@gmail.com"
+    },
+    "date": "2016-04-29T12:42:45+02:00",
+    "subject": "feat: fake 1",
+    "body": ""
+  }
+]
