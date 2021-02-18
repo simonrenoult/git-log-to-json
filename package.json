@@ -31,7 +31,8 @@
     "standard": "^7.0.0"
   },
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "hjson": "^3.2.2"
   },
   "scripts": {
     "start": "./bin/git-log-to-json",
